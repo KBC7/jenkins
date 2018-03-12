@@ -1,6 +1,6 @@
 node {
    def commit_id
-   stage('Preperation')
+   stage('Preperation') {
      checkout scm
      sh "git rev-parse --short HEAD > .git/commit_id"
      commit-id = readfile('.git/commit_id').trim()
