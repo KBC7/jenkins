@@ -3,7 +3,7 @@ node {
    stage('Preperation') {
      checkout scm
      sh "git rev-parse --short HEAD > .git/commit_id"
-     commit-id = readfile('.git/commit_id').trim()
+     commit_id = readfile('.git/commit_id').trim()
     }
     stage('test') {
       nodejs(nodeJSInstallationName: 'nodejs') {
